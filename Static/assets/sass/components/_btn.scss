@@ -1,0 +1,167 @@
+/* =======================
+   Components / Buttons
+   ======================= */
+
+%button {
+  display: block;
+  padding: 15px 20px 13px;
+  max-width: 25rem;
+  font-family: $body-font;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include transition;
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+html.flex %button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  max-width: 25rem;
+  font-size: ms(0);
+  text-align: center;
+  text-decoration: none;
+  @include border-radius;
+  @include transition;
+  backface-visibility: hidden;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+%tiny {
+  padding-right: .3rem;
+  padding-left: .3rem;
+}
+
+%small {
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+%medium {
+  padding: .5rem .8rem;
+}
+
+%big {
+  padding: 1rem 1.2rem;
+}
+
+%large {
+  padding: 1rem 1.2rem;
+  min-width: 15rem;
+}
+
+%secondary {
+  border-color: #000;
+  color: #000;
+
+  &:hover {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+%primary {
+  border: none;
+  background-color: $red;
+  color: #000;
+
+  &:hover {
+    color: #000;
+    background-color: #000;
+  }
+
+  &:active {
+    color: #fff;
+  }
+}
+
+.btn {
+  @extend %button;
+
+  &--secondary {
+    @extend %button;
+    @extend %secondary;
+  }
+
+  &--primary {
+    @extend %button;
+    @extend %primary;
+  }
+
+  &--tiny {
+    @extend %tiny;
+  }
+
+  &--small {
+    @extend %small;
+  }
+
+  &--medium {
+    @extend %medium;
+  }
+
+  &--big {
+    @extend %big;
+  }
+
+  &--large {
+    @extend %large;
+  }
+}
+
+.btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  @include size(4rem);
+  font-size: ms(2);
+  cursor: pointer;
+}
+
+.btn-icon {
+  justify-content: center;
+
+  .btn-text {
+    margin-left: .3rem;
+  }
+}
+
+.btn-icon-rtl {
+  justify-content: center;
+
+  .btn-text {
+    margin-right: .3rem;
+  }
+}
+
+@each $social-network,
+$social-color in $social-colors {
+  .icon-#{$social-network}-with-circle {
+    color: $social-color;
+  }
+  .btn-#{$social-network} {
+    background-color: $social-color;
+    color: #fff;
+    font-weight: 200;
+  }
+}
+
+.btn-facebook {
+  @include reset-link(#fff);
+  height: $input-height;
+  @include mq($from: desktop) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}

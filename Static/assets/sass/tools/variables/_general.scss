@@ -1,0 +1,32 @@
+// ----------------------
+// == General
+// ----------------------
+
+// STYLE
+$border-radius: 5px;
+
+// HEADER
+$header-main-height: $baseline * 4 !default;
+
+// MODAL
+$modal-header-height: $base-font-size * 4 !default;
+$modal-padding: $base-font-size * 2 !default;
+
+// ALERT
+$alert-side-padding: $base-font-size * 1.3;
+$tooltip-icon-color: #000 !default;
+
+// DROPDOWN
+$dropdown-height: $base-font-size * 3 !default;
+
+// MEDIA
+$padding-media: $base-font-size !default;
+
+// NAV
+$nav-main-height: $base-font-size * 4 !default;
+
+// FORM
+$input-height: $base-font-size * 3 !default;
+
+// FOOTER
+$footer-social-icon-size: $base-font-size * 2.5 !default;

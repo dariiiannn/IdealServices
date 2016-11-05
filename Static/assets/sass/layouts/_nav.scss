@@ -1,0 +1,42 @@
+/* ==|======================
+   Layout / Navigation
+   ========================= */
+
+.main-menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: $baseline * 10;
+}
+
+.main-menu-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+	&:last-child {
+		padding-right: 0;
+	}
+	a {
+		@include transition();
+		color: $white;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		letter-spacing: $letter-spacing-base;
+		font-family: $heading-font;
+		&:hover {
+			color: $color-main;
+		}
+	}
+}
+
+//.header-main-link {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  height: 100%;
+//  @include reset-link(#f6ff);
+//  &:hover {
+//    text-decoration: underline;
+//  }
+//}

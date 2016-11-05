@@ -1,0 +1,65 @@
+/* ==========================
+   Components / Alert
+   ========================== */
+
+%alert {
+//  @include border-radius();
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: .7rem $baseline / 2;
+  border: 1px solid;
+  line-height: $base-line-height;
+  margin-bottom: 1rem;
+  @include mq($from: desktop) {
+    max-width: $max-content-width;
+    line-height: 1.5;
+  }
+  .errorlist {
+    margin-top: .5rem;
+    list-style: none;
+  }
+}
+
+// @each $alert-type, $alert-type in $alert-types {
+//     .alert-#{$alert-type} {
+//         background-color: tint($alert-type, 30%);
+//         color: $alert-type;
+//     }
+// }
+.alert {
+  @extend %alert;
+  background-color: tint(#000, 80%);
+  color: #000;
+}
+
+.alert-success {
+  @extend %alert;
+  background-color: tint($success, 80%);
+  color: $success;
+}
+
+.alert-error {
+  @extend %alert;
+  background-color: tint($error, 80%);
+  color: $error;
+}
+
+.alert-error2 {
+  @extend %alert;
+  background-color: tint($orange, 80%);
+  color: $orange;
+}
+
+.alert-text {
+  @include rms(0);
+  font-weight: 200;
+}
+
+.alert-close-btn {
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  margin-left: $alert-side-padding;
+}

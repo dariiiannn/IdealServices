@@ -1,0 +1,115 @@
+/* ==|====================
+   Layout / Header
+   ======================= */
+
+// The '.headnav' class must be applied on the
+// element wrapping the header and the navigation
+.headnav {
+	//  position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: $zIndex-headerMain;
+}
+
+.header-main {
+	position: relative;
+	height: $baseline * 10;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	//  overflow: hidden;
+	// This z-index has to be .dropdown-menu z-index + 1
+	z-index: $zIndex-headerMain;
+	//  background-color: red;
+	@include transition();
+	//  &.is-hidden {
+	//    transform: translateY(-100%);
+	//  }
+}
+
+.heade-info {
+	position: absolute;
+	right: 0;
+	top: 39px;
+}
+
+.header-info-home {}
+
+.header-phone {
+	font-size: $font-size-h4;
+	text-align: left;
+	color: $white;
+	padding-right: $baseline/2;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	p {
+		font-family: $heading-font;
+		font-size: 1.5rem;
+	}
+}
+
+.devis {
+	background-color: $white;
+	color: $black;
+	padding: $base-font-size;
+	text-transform: uppercase;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	
+	@include transition();
+	p {
+		font-family: $heading-font;
+		letter-spacing: $letter-spacing-base;
+		font-size: 1.1rem;
+	}
+	&:hover {
+	color: $color-second;
+	}
+}
+
+.devis-home {}
+
+//
+//// On mobile we hide the subscription btn...
+//.header-main__subscription-btn {
+//  display: none;
+//  @include mq($from: tablet) {
+//    display: flex;
+//  }
+//}
+//
+////... and we remove the padding right of the previous element
+//.header-main__login-btn {
+//  @include mq($from: mobile, $until: tablet) {
+//    padding-right: 0;
+//  }
+//}
+//
+//.header-main-toggle-user-menu {
+//  position: relative;
+//  display: flex;
+//  flex-direction: row;
+//  align-items: center;
+//  height: 100%;
+//  @include reset-link(#fff);
+//  // & > i {
+//  //     color: #fff;
+//  //     margin-left: .5rem;
+//  //     @include transition();
+//  // }
+//  // & > i.is-active {
+//  //     transform: rotate(180deg);
+//  // }
+//  .avatar {
+//    margin-right: .5rem;
+//  }
+//  .username {
+//    display: none;
+//    @include mq($from: tablet) {
+//      display: inline-block;
+//    }
+//  }
+//}
+//

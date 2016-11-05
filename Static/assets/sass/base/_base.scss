@@ -1,0 +1,86 @@
+// ========================================================================================
+// Base | Default, single element selectors that will look the same regardless of location.
+// ========================================================================================
+
+html {
+  overflow-y: scroll;
+  /* [1] */
+  min-height: 100%;
+  /* [2] */
+  -webkit-text-size-adjust: 100%;
+  /* [3] */
+  -ms-text-size-adjust: 100%;
+  /* [3] */
+  // Mobile First Approach
+  // Refer to https://prowebtype.com/setting-type/
+  font-family: $body-font, serif;
+  font-size: 100%;
+  // line-height: 1.6;
+  font-weight: 400;
+  margin: 0 auto;
+  // padding: 2em; // padding so that bullet list don't touche the edge of the screen
+  text-align: left;
+}
+
+body,
+html {
+  width: 100%;
+  margin: 0;
+  color: $color-text;
+ 	font-size: $base-font-size;
+}
+
+body {
+		-webkit-font-smoothing: antialiased;
+}
+
+// ---------------------------------
+// GENERAL SETTINGS
+// ---------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include transition();
+  line-height: $base-line-height;
+  margin-bottom: $baseline;
+}
+
+p,
+a,
+ul,
+blockquote,
+figcaption {
+  font-family: $body-font;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: $color-main;
+  color: $white;
+  text-shadow: none;
+}
+
+a, i {
+  text-decoration: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $color-border;
+  margin: 1em 0;
+  padding: 0;
+}

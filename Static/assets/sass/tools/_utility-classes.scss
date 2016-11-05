@@ -1,0 +1,526 @@
+ // ----------------------
+ // == Utility Classes
+ // ----------------------
+
+
+/*-----------------------------------------------------------------------------------
+	helpers.scss
+-----------------------------------------------------------------------------------*/
+
+//General
+.uppercase { 
+  text-transform: uppercase !important; 
+}
+
+.lowercase { 
+  text-transform: lowercase !important; 
+}
+
+.capitalize { 
+  text-transform: capitalize !important; 
+}
+
+.no-transform { 
+  text-transform: none !important; 
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+.ohidden {
+	position: relative;
+	overflow: hidden !important;
+}
+
+//.noshadow { 
+//  @include box-shadow(none !important) 
+//    }
+//
+//.noradius { 
+//  @include border-radius(0); 
+//}
+
+.hidden { 
+  display: none !important; 
+}
+
+.list-reset {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+}
+
+// Positioning
+.block { 
+  display: block !important; 
+}
+
+.inline-block {
+	float: none !important;
+	display: inline-block !important;
+}
+
+.relative { 
+  position: relative !important; 
+}
+
+.absolute { 
+  position: absolute !important; 
+}
+
+// Alignment
+.tright { 
+  text-align: right !important; 
+}
+
+.tleft { 
+  text-align: left !important; 
+}
+
+.tcenter { 
+  text-align: center !important; 
+}
+
+.fright { 
+  float: right !important; 
+}
+
+.fleft { 
+  float: left !important; 
+}
+
+.fnone { 
+  float: none !important; 
+}
+
+.divcenter {
+	position: relative !important;
+	float: none !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+}
+
+.flex-absolute-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+//Margin
+/* Small */
+.allmargin-sm { 
+  margin: $base-font-size !important; 
+}
+
+.leftmargin-sm { 
+  margin-left: $base-font-size !important; 
+}
+
+.rightmargin-sm { 
+  margin-right: $base-font-size !important; 
+}
+
+.topmargin-sm { 
+  margin-top: $base-font-size !important; 
+}
+
+.bottommargin-sm { 
+  margin-bottom: $base-font-size !important; 
+}
+
+.clear-bottommargin-sm { 
+  margin-bottom: -$base-font-size !important; 
+}
+
+/* Medium */ 
+.allmargin { 
+  margin: $baseline !important; 
+}
+
+.leftmargin { 
+  margin-left: $baseline !important; 
+}
+
+.rightmargin { 
+  margin-right: $baseline !important; 
+}
+
+.topmargin { 
+  margin-top: $baseline !important; 
+}
+
+.bottommargin { 
+  margin-bottom: $baseline !important; 
+}
+
+.clear-bottommargin { 
+  margin-bottom: -$baseline !important; 
+}
+
+.clear-topmargin { 
+  margin-top: -$baseline !important; 
+}
+
+/* Large */
+.allmargin-lg { 
+  margin: $general-margin !important; 
+}
+
+.leftmargin-lg { 
+  margin-left: $general-margin !important; 
+}
+
+.rightmargin-lg { 
+  margin-right: $general-margin !important; 
+}
+
+.topmargin-lg { 
+  margin-top: $general-margin !important; 
+}
+
+.bottommargin-lg { 
+  margin-bottom: $general-margin !important; 
+}
+
+.clear-bottommargin-lg { 
+  margin-bottom: -$general-margin !important; 
+}
+
+/* Extra Large */
+.allmargin-xlg { 
+  margin: $section-margin !important; 
+}
+
+.leftmargin-xlg { 
+  margin-left: $section-margin !important; 
+}
+
+.rightmargin-xlg { 
+  margin-right: $section-margin !important; 
+}
+
+.topmargin-xlg { 
+  margin-top: $section-margin !important; 
+}
+
+.bottommargin-xlg { 
+  margin-bottom: $section-margin !important; 
+}
+
+.clear-bottommargin-xlg { 
+  margin-bottom: -$section-margin !important; 
+}
+
+/* No margin */
+.nomargin {margin: 0 !important; }
+
+.noleftmargin { 
+	margin-left: 0 !important; 
+}
+
+.norightmargin { 
+	margin-right: 0 !important; 
+}
+
+.notopmargin { 
+	margin-top: 0 !important; 
+}
+
+.nobottommargin { 
+	margin-bottom: 0 !important; 
+}
+
+//Padding
+/* Small */
+.allpadding-sm { 
+  padding: $base-font-size !important; 
+}
+
+.leftpadding-sm { 
+  padding-left: $base-font-size !important; 
+}
+
+.rightpadding-sm { 
+  padding-right: $base-font-size !important; 
+}
+
+.toppadding-sm { 
+  padding-top: $base-font-size !important; 
+}
+
+.bottompadding-sm { 
+  padding-bottom: $base-font-size !important; 
+}
+
+.clear-bottompadding-sm { 
+  padding-bottom: -$base-font-size !important; 
+}
+
+/* Medium */ 
+.allpadding { 
+  padding: $baseline !important; 
+}
+
+.leftpadding { 
+  padding-left: $baseline !important; 
+}
+
+.rightpadding { 
+  padding-right: $baseline !important; 
+}
+
+.toppadding { 
+  padding-top: $baseline !important; 
+}
+
+.bottompadding { 
+  padding-bottom: $baseline !important; 
+}
+
+.clear-bottompadding { 
+  padding-bottom: -$baseline !important; 
+}
+
+/* Large */
+.allpadding-lg { 
+  padding: $general-margin !important; 
+}
+
+.leftpadding-lg { 
+  padding-left: $general-margin !important; 
+}
+
+.rightpadding-lg { 
+  padding-right: $general-margin !important; 
+}
+
+.toppadding-lg { 
+  padding-top: $general-margin !important; 
+}
+
+.bottompadding-lg { 
+  padding-bottom: $general-margin !important; 
+}
+
+.clear-bottompadding-lg { 
+  padding-bottom: -$general-margin !important; 
+}
+
+/* Extra Large */
+.allpadding-xlg { 
+  padding: $section-margin !important; 
+}
+
+.leftpadding-xlg { 
+  padding-left: $section-margin !important; 
+}
+
+.rightpadding-xlg { 
+  padding-right: $section-margin !important; 
+}
+
+.toppadding-xlg { 
+  padding-top: $section-margin !important; 
+}
+
+.bottompadding-xlg { 
+  padding-bottom: $section-margin !important; 
+}
+
+.clear-bottompadding-xlg { 
+  padding-bottom: -$section-margin !important; 
+}
+
+/* No padding */
+.nopadding { 
+  padding: 0 !important; 
+}
+
+.noleftpadding { 
+  padding-left: 0 !important; 
+}
+
+.norightpadding { 
+  padding-right: 0 !important; 
+}
+
+.notoppadding { 
+  padding-top: 0 !important; 
+}
+
+.nobottompadding { 
+  padding-bottom: 0 !important; 
+}
+
+// Borders
+.allmainborder {
+  border: 1 px solid $color-border;
+}
+
+.topmainborder {
+  border-top: 1 px solid $color-border;
+}
+
+.rightmainborder {
+  border-right: 1 px solid $color-border;
+}
+
+.bottommainborder {
+  border-bottom: 1 px solid $color-border;
+}
+
+.leftmainborder {
+  border-left: 1 px solid $color-border;
+}
+
+/* No border */
+.noborder { 
+  border: none !important; 
+}
+
+.noleftborder { 
+  border-left: none !important; 
+}
+
+.norightborder { 
+  border-right: none !important; 
+}
+
+.notopborder { 
+  border-top: none !important; 
+}
+
+.nobottomborder { 
+  border-bottom: none !important; 
+}
+
+// Colors
+.color-main { 
+  color: $color-main !important; 
+}
+
+.color-second { 
+  color: $color-second !important; 
+}
+
+.color-border {
+  border-color: $color-border !important; 
+}
+
+/* Backgrounds */
+.bg-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.bgcolor-main { 
+  background-color: $color-main !important; 
+}
+
+.bgcolor-second { 
+  background-color: $color-second !important; 
+}
+
+.nobg { 
+  background: none !important; 
+}
+
+.transparentbg { 
+  background-color: transparent !important; 
+}
+
+/* Moving background */
+.bganimate {
+  -webkit-animation:BgAnimated 30s infinite linear;
+	 -moz-animation:BgAnimated 30s infinite linear;
+	  -ms-animation:BgAnimated 30s infinite linear;
+	   -o-animation:BgAnimated 30s infinite linear;
+		  animation:BgAnimated 30s infinite linear;
+}
+
+@-webkit-keyframes BgAnimated {
+	from  {background-position:0 0;}
+	to    {background-position:0 400px;}
+}
+
+@-moz-keyframes BgAnimated {
+	from  {background-position:0 0;}
+	to    {background-position:0 400px;}
+}
+
+@-ms-keyframes BgAnimated {
+	from  {background-position:0 0;}
+	to    {background-position:0 400px;}
+}
+
+@-o-keyframes BgAnimated {
+	from  {background-position:0 0;}
+	to    {background-position:0 400px;}
+}
+
+@keyframes BgAnimated {
+	from  {background-position:0 0;}
+	to    {background-position:0 400px;}
+}
+
+
+.input-block-level {
+	display: block;
+	width: 100% !important;
+	min-height: 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.vertical-middle {
+	height: auto !important;
+	left: 0;
+}
+
+// Gradients backgounds
+.bg-verticalgradient {
+		background: transparent; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(0,0,0,0),rgba(0,0,0,0)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(0,0,0,0),rgba(0,0,0,0)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0)); /*Standard*/
+}
+
+.bg-orizontalgradient {
+   background: transparent; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)); /* Standard syntax */
+}
+
+// This class adds a coma at every li except the ast one.
+// Note: This tip may not be ideal for accessibility, 
+// specifically screen readers. And copy/paste from the browser 
+// doesn't work with CSS-generated content. Proceed with caution.
+.u-coma-sep-items > li:not(:last-child):after {
+  content: ',';
+}
+
+// Apply this class to add vertical lines helping
+// you to apply a proper vertical rythm
+.u-baseline:after {
+  background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05) 24px, rgba(0, 0, 0, 0.1) 24px, rgba(0, 0, 0, 0.1) 48px);
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

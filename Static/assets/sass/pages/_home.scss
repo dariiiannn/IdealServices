@@ -1,0 +1,27 @@
+/* ==|======================
+   Pages / Home
+   ========================= */
+
+.home-description-desktop {
+	p {
+		margin-bottom: $baseline;
+	}
+}
+
+.demarche-desktop {
+	background-color: $black;
+	padding: $baseline * 3;
+	margin-top: -($baseline * 11);
+	color: $white;
+	p {
+		margin-bottom: $baseline/2;
+	}
+}
+
+.home-img-1 {
+	margin-top: - $baseline;
+}
+
+.home-img-2 {
+	margin-top: - ($baseline * 13);
+}
